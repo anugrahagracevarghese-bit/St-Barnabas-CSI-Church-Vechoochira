@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>St Barnabas CSI Church</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+.search-box{
+    display:flex;
+    justify-content:center;
+    margin:20px auto;
+    width:90%;
+}
+
+.search-box input{
+    width:100%;
+    padding:18px;
+    font-size:22px;
+    border:1px solid #ccc;
+    border-right:none;
+    outline:none;
+    border-radius:10px 0 0 10px;
+}
+
+.search-box button{
+    width:80px;
+    border:none;
+    background:white;
+    font-size:30px;
+    cursor:pointer;
+    border:1px solid #ccc;
+    border-left:none;
+    border-radius:0 10px 10px 0;
+}
+   body {
+      font-family: 'Merriweather', serif;
+    margin: 0;
+    background-color:  #d8c3a5;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}header {
+    background: url('bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+/* Dark overlay for better text visibility */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Make text appear above overlay */
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+
+ nav {
+    background: #eaf6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    background: rgba(40, 20, 10, 0.92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav button {
+    background: linear-gradient(45deg, #c47b36, #e0a15d);
+    border: none;
+    color: white;
+    padding: 14px 30px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Merriweather', serif;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    font-weight: bold;
+}
+
+nav button:hover {
+    background: linear-gradient(45deg, #d8924f, #f0b06d);
+    transform: translateY(-3px) scale(1.03);
+}
+
+nav button:focus {
+    background: #b96a24;
+}
+
+.tab {
+    display: none;
+    padding: 25px;
+    background: rgba(255,255,255,0.95);
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.active {
+    display: block;
+}
+
+.gallery img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.gallery {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2f1b12;
+    color: white;
+    margin-top: 20px;
+    font-family: 'Merriweather', serif;
+}</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png"
+style="
+width:100px;
+height:100px;
+position:absolute;
+top:20px;
+left:20px;
+border-radius:50%;
+z-index:2;
+">
+<img src="logo1.png"
+style="
+width:80px;
+height:100px;
+position:absolute;
+top:20px;
+right:20px;
+border-radius:50%;
+z-index:2;
+">
+
+    <h1>St Barnabas CSI Church</h1>
+<p>Ennooramvayal</p>
+<p style="font-size: 60px;">✝</p>
+<p> Vechoochira, Pathanamthitta, Kerala P.O.686511, India</p>
+</header>
+
+<nav>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('about')">Organizations</button>
+    <button onclick="showTab('services')">Services</button>
+    <button onclick="showTab('gallery')">Gallery</button>
+    <button onclick="showTab('contact')">Contact</button>
+</nav>
+<div class="search-box">
+
+<input type="text" id="searchInput" placeholder="Search">
+
+<button onclick="searchPage()">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+</div>
+
+<!-- HOME -->
+<div id="home" class="tab active">
+    <p>
+        St Barnabas CSI Church, located in Ennooramvayal, is a place of worship
+        with a rich spiritual heritage and strong community bond. The church is located in Ranni, Pathanamthitta, Kerala nearby to the government office Panchayath Office, Vechoochira, as well as near Kulamamkuzhy St Andrew’s Marthoma church.<br>
+<br>
+<img src="church1.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="church.jpg" width="300" height="200" style="border-radius:10px";>
+<h2>📍 Basic details</h2>
+<p>Location: Ennooramvayal, Vechoochira, Kerala</p>
+<p>Denomination: Church of South India</p>
+<p>Diocese: Madhya Kerala Diocese</p>
+</p>Type: Parish church</p>
+<br>
+<h2>⛪ Growth of the parish</h2>
+<p>Became an independent pastorate in 1958.<p>
+<p>Today it has:<p/>
+<p>Around 700 members</p>
+<p>About 130+ families</p>
+<p>Church property of over 2 acres</p>
+<br>
+<p>This shows steady growth from a small missionary outpost to a well-established parish.</p>
+<br>
+<h2>🏛️ History & origin</h2>
+<p>The church was established in 1905.</p>
+<p>It was founded by CMS (Church Missionary Society) missionaries, who played a major role in spreading Christianity and education in central Kerala.</p>
+<p>The surrounding region (Vechoochira) itself developed during the early 1900s when missionary activity and migration increased.</p>
+<br>
+<h2>📌 Importance</h2>
+<p>One of the early Protestant churches in the Vechoochira region</p>
+<p>Represents the missionary expansion era (early 20th century) in Kerala</p>
+<p>Continues to be an active spiritual center for the local community</p>
+<hr>
+
+<h1>✝️ Our Bishop</h1>
+
+<h2>Bishop Malayil Sabu Koshy Cherian</h2>
+
+<img src="bishop.jpg" width="300" height="450" style="border-radius:10px;">
+
+<p>
+Bishop Malayil Sabu Koshy Cherian is the Bishop of the Madhya Kerala Diocese
+of the Church of South India (CSI). He provides spiritual leadership,
+guidance, and pastoral care to the diocesan community while strengthening
+the mission and ministry of the Church.
+</p>
+
+<p>
+Through his leadership, the Diocese continues its commitment to worship,
+education, social service, youth empowerment, and community development.
+</p>
+
+<h1>⛪ Our Vicar</h1>
+
+<h2>Rev. Johnson Alexandar</h2>
+
+<img src="vicar.png" width="300" height="400" style="border-radius:10px;">
+
+<p>
+Rev. Johnson Alexandar serves as the Vicar of St Barnabas CSI Church,
+Ennooramvayal. Through his spiritual leadership, pastoral care, and dedication,
+he guides the congregation in worship, faith, and community service.
+</p>
+
+<p>
+He plays an important role in strengthening the spiritual life of the parish
+and encouraging unity, prayer, and Christian fellowship among the members.
+</p>
+</div>
+<!-- ORGANIZATIONS -->
+<div id="about" class="tab">
+    <h2>Organizations</h2>
+<hr>
+
+<h1>📖Sunday School</h1>
+
+<p><b>Mission:</b> The Sunday School operates with the goal of raising children in the path of God, helping them grow in faith and spiritual knowledge.</p>
+
+<p><b>Curriculum and Structure:</b></p>
+<ul>
+    <li>Classes are conducted for children from age 3 to Grade 12.</li>
+    <li>The school follows the syllabus and guidelines of the C.S.I. Madhya Kerala Diocese.</li>
+    <li>Education is organized into Nursery, Primary, Junior, Intermediate, and Senior levels.</li>
+</ul>
+
+<p><b>Activities:</b></p>
+<ul>
+    <li>Students participate in singing, Bible reading, quiz competitions, and other events at parish and district levels.</li>
+    <li>Special programs such as Vacation Bible School (VBS) and Sunday School Sunday are regularly organized.</li>
+</ul>
+
+<p><b>Leadership and Support:</b> The Sunday School is guided by a Headmaster/Headmistress along with a dedicated team of volunteer teachers who mentor and support the children spiritually and academically.</p>
+<img src="ss.jpg" width="300" height="200" style="border-radius:10px";>
+
+
+    <h1>🎶Church Choir</h1>
+    <p><b>Mission:</b> The choir is dedicated to praising God through song, rooted in the belief expressed in Psalm 104:33:
+    "I will sing to the Lord all my life; I will sing praise to my God as long as I live."</p>
+
+    <p><b>Structure:</b> The group includes both senior and junior choirs, with new members joining through a dedication service held on Choir Sunday.</p>
+
+    <p><b>Key Responsibilities:</b> They lead the congregation in hymns during Sunday worship, Christmas Carol services, and ecumenical gatherings.</p>
+
+    <p><b>Training:</b> Regular practices are conducted to maintain a high standard of musical performance for worship services.</p>
+
+ <img src="choir 1.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="choir 2.png" width="300" height="200" style="border-radius:10px";>
+
+    <hr>
+
+    <h1>👥Youth Movement</h1>
+
+    <p><b>Foundation:</b> The organization is a registered branch of the C.S.I. Madhya Kerala Diocese.</p>
+
+    <p><b>Core Objectives:</b> It focuses on the holistic development of young people through worship, study, and service.</p>
+
+    <p><b>Activities:</b> The group organizes spiritual and social programs including independent worship sessions, cricket competitions, and participation in diocesan-level youth meets.</p>
+
+    <p><b>Social Impact:</b> Members are encouraged to participate in community activities and leadership training camps.</p>
+<img src="youth 1.png" width="300" height="200" style="border-radius:10px";>
+<img src="youth 2.png" width="300" height="200" style="border-radius:10px";>
+<img src="youth 3.jpg" width="300" height="200" style="border-radius:10px";>
+
+
+  <hr>
+
+    <h1>🌸Women's Fellowship</h1>
+
+    <p><b>Spiritual Growth:</b> Regular meetings are held, usually on Sunday afternoons, focusing on prayer and spiritual study.</p>
+
+    <p><b>Community Outreach:</b> The fellowship is actively involved in charity work, including raising funds for medical aid and supporting diocesan initiatives such as the "Sneha Poorvam" project.</p>
+
+    <p><b>Parish Involvement:</b> Members participate in parish conventions and help organize meals and refreshments for church events.</p>
+<img src="20.png" width="300" height="200" style="border-radius:10px";>
+
+    <hr>
+
+    <h1>🙏 Laity Fellowship</h1>
+
+    <p><b>Purpose:</b> This fellowship strengthens the involvement of laypeople in the church's mission and provides opportunities for prayer and fellowship.</p>
+
+    <p><b>Prayer Ministry:</b> Regular prayer meetings are conducted, often at 7:00 PM on Friday evenings, focusing on intercessory prayer and Bible study.</p>
+
+    <p><b>Visitation Ministry:</b> Members visit sick and elderly parishioners to offer spiritual support and companionship.</p>
+ <img src="laity.jpg" width="300" height="200" style="border-radius:10px";>
+
+    <hr>
+
+    <h1>🏫 Our School- CMS LP School Vechoochira</h1>
+
+    <p><b>Mission and History:</b> This institution is dedicated to providing primary education and has served as a “golden light” in the region for over 120 years.</p>
+
+    <p><b>Expansion:</b> The school recently completed a major infrastructure project with the construction of a new two-story building costing approximately 1 crore rupees, supported by church members and committees.</p>
+
+    <p><b>Modern Facilities:</b> The school integrates modern technology into education through Smart Class facilities, LSS training, and computer education.</p>
+
+    <p><b>Community and Academic Excellence:</b> Students regularly achieve scholarships and awards at the sub-district level. The school also has active PTA and MPTA groups supporting student welfare and development.</p>
+
+    <p><b>Holistic Development:</b> Along with academics, students participate in cultural programs, sports activities, and social initiatives such as “Love Feast”.</p>
+ <img src="school 1.jpg" width="300" height="200" style="border-radius:10px";>
+
+<img src="school 2.jpg" width="300" height="200" style="border-radius:10px";>
+
+<img src="school 3.jpg" width="300" height="200" style="border-radius:10px";>
+
+<img src="school 4.jpg" width="300" height="200" style="border-radius:10px";>
+
+
+    <h1>🏠 Our Hostel- CSI Bethanya Women’s Hostel</h1>
+
+    <p><b>Purpose:</b> The hostel provides a safe and supportive residential environment for students and working women.</p>
+
+    <p><b>Management:</b> The hostel is managed by a committee under the guidance of the church vicar and a warden, specifically mentioned during this period as Smt. Lizzy John.</p>
+
+    <p><b>Operational Support:</b> Hostel operations are sustained through monthly fees, and financial accounts are regularly audited to ensure transparency and proper administration.</p>
+
+    <p><b>Atmosphere:</b> The hostel encourages a spiritual, disciplined, and supportive lifestyle while maintaining close coordination with church activities and programs.</p>
+
+<img src="hostel.png" width="300" height="200" style="border-radius:10px";>
+
+ </div>
+
+
+<!-- GALLERY -->
+<div id="gallery" class="tab">
+<img src="1.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="2.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="4.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="5.png" width="300" height="200" style="border-radius:10px";>
+<img src="6.png" width="300" height="200" style="border-radius:10px";>
+<img src="7.png" width="300" height="200" style="border-radius:10px";>
+<img src="8.png" width="300" height="200" style="border-radius:10px";>
+<img src="9.png" width="300" height="200" style="border-radius:10px";>
+<img src="10.png" width="300" height="200" style="border-radius:10px";>
+<img src="11.png" width="300" height="200" style="border-radius:10px";>
+<img src="12.png" width="300" height="200" style="border-radius:10px";>
+<img src="13.png" width="300" height="200" style="border-radius:10px";>
+<img src="14.png" width="300" height="200" style="border-radius:10px";>
+<img src="15.png" width="300" height="200" style="border-radius:10px";>
+<img src="16.png" width="300" height="200" style="border-radius:10px";>
+<img src="17.png" width="300" height="200" style="border-radius:10px";>
+<img src="18.png" width="300" height="200" style="border-radius:10px";>
+<img src="19.png" width="300" height="200" style="border-radius:10px";>
+<img src="20.png" width="300" height="200" style="border-radius:10px";>
+<img src="21.png" width="300" height="200" style="border-radius:10px";>
+<img src="22.png" width="300" height="200" style="border-radius:10px";>
+<img src="23.png" width="300" height="200" style="border-radius:10px";>
+<img src="24.png" width="300" height="200" style="border-radius:10px";>
+<img src="25.png" width="300" height="200" style="border-radius:10px";>
+<img src="26.png" width="300" height="200" style="border-radius:10px";>
+<img src="27.png" width="300" height="200" style="border-radius:10px";>
+<img src="28.png" width="300" height="200" style="border-radius:10px";>
+<img src="29.png" width="300" height="200" style="border-radius:10px";>
+<img src="30.png" width="300" height="200" style="border-radius:10px";>
+<img src="31.png" width="300" height="200" style="border-radius:10px";>
+<img src="church1.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="church.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="ss.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="choir 1.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="choir 2.png" width="300" height="200" style="border-radius:10px";>
+<img src="youth 1.png" width="300" height="200" style="border-radius:10px";>
+<img src="youth 2.png" width="300" height="200" style="border-radius:10px";>
+<img src="youth 3.jpg" width="300" height="200" style="border-radius:10px";>
+<img src="laity.jpg" width="300" height="200" style="border-radius:10px";>
+</div>
+<!-- CONTACT -->
+<div id="contact" class="tab">
+   <h2>Contact</h2>
+
+<p>📍 <b>Address:</b> Vechoochira, Pathanamthitta Dt., Vechoochira, Kerala 686511</p>
+<p>📞 <b>Phone:</b> 04735 265 230</p>
+
+<p>⏰ <b>Hours:</b> Closed · Opens 8:00 AM Sunday</p>
+<p>
+📍 <a href="https://maps.app.goo.gl/J7zk7o8KpBg1F1M98" target="_blank">
+View Location on Google Maps
+</a>
+</p>
+<hr>
+
+<h2>▶ Follow Us on Instagram</h2>
+
+<a href="https://instagram.com/csi_youth_vechoochira"
+target="_blank"
+style="
+display:inline-block;
+padding:12px 25px;
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-size:20px;
+font-weight:bold;
+">
+<i class="fa-brands fa-instagram"></i> @csi_youth_vechoochira
+</a>
+
+<br><br>
+
+<h2>▶ Join Our Facebook Community</h2>
+
+<a href="https://www.facebook.com/groups/431193183700962/"
+target="_blank"
+style="
+display:inline-block;
+padding:12px 25px;
+background:#1877F2;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-size:20px;
+font-weight:bold;
+">
+<i class="fa-brands fa-facebook"></i>
+ST.BARNABAS C.S.I CHURCH VECHOOCHIRA
+</a>
+<br><br>
+
+<h2>▶ Subscribe to Our YouTube Channel</h2>
+
+<a href="https://www.youtube.com/@st.barnabascsichurchvechoo4111"
+target="_blank"
+style="
+display:inline-block;
+padding:12px 25px;
+background:#FF0000;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-size:20px;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+">
+<i class="fa-brands fa-youtube"></i>
+St. Barnabas CSI Church Vechoochira
+</a>
+</div>
+<!-- SERVICES -->
+<div id="services" class="tab">
+   <h2>Services</h2>
+
+<ul>
+    <li>📖 Sunday School Worship – 8:00 AM (Sunday)</li>
+
+    <li>👧 Sunday School Classes – 8:30 AM – 9:15 AM (Sunday)</li>
+
+    <li>✝️ Church Service – 9:30 AM (Sunday)</li>
+
+    <li>🎶 Choir Practice – 11:30 AM (Sunday)</li>
+
+    <li>🌸 Women's Fellowship Prayer – 10:00 AM (Tuesday)</li>
+
+    <li>🙏 Laity Fellowship Prayer – 7:00 PM (Wednesday)</li>
+
+    <li>🔥 Fasting Prayer – 10:00 AM (Friday)</li>
+</ul>
+</div>
+<footer>
+    <p>© 2026 St Barnabas CSI Church</p>
+</footer>
+
+<script>
+
+function showTab(tabId) {
+
+    let tabs = document.querySelectorAll('.tab');
+
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+}
+
+function searchPage() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let tabs = document.querySelectorAll(".tab");
+
+    let found = false;
+
+    tabs.forEach(tab => {
+
+        let elements = tab.querySelectorAll("h1, h2, h3, p, li");
+
+        elements.forEach(element => {
+
+            if(element.innerText.toLowerCase().includes(input) && !found){
+
+                found = true;
+
+                tabs.forEach(t => {
+                    t.classList.remove("active");
+                });
+
+                tab.classList.add("active");
+
+                setTimeout(() => {
+
+                    element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+
+                    element.style.backgroundColor = "yellow";
+
+                    setTimeout(() => {
+                        element.style.backgroundColor = "";
+                    }, 3000);
+
+                }, 100);
+            }
+        });
+    });
+
+    if(!found){
+        alert("No result found");
+    }
+}
+</script>
+</body>
+</html>						
