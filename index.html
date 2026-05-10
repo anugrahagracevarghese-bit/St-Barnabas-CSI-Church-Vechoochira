@@ -159,34 +159,45 @@ footer {
 <body>
 
 <header>
-<img src="logo.png"
-style="
-width:100px;
-height:100px;
-position:absolute;
-top:20px;
-left:20px;
-border-radius:50%;
+
+<div style="
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+position:relative;
 z-index:2;
 ">
+
+<img src="logo.png"
+style="
+width:90px;
+height:90px;
+border-radius:50%;
+">
+
 <img src="logo1.png"
 style="
 width:80px;
-height:100px;
-position:absolute;
-top:20px;
-right:20px;
+height:90px;
 border-radius:50%;
-z-index:2;
 ">
 
-    <h1>St Barnabas CSI Church</h1>
-<p>Ennooramvayal</p>
-<p style="font-size: 60px;">✝</p>
-<p> Vechoochira, Pathanamthitta, Kerala P.O.686511, India</p>
-</header>
+</div>
 
-<nav>
+<h1 style="margin-top:35px;">
+St Barnabas CSI Church
+</h1>
+
+<p>Ennooramvayal</p>
+
+<p style="font-size: 40px;">✝</p>
+
+<p>
+Vechoochira, Pathanamthitta, Kerala P.O.686511, India
+</p>
+
+</header><nav>
     <button onclick="showTab('home')">Home</button>
     <button onclick="showTab('about')">Organizations</button>
     <button onclick="showTab('services')">Services</button>
